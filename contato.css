@@ -1,0 +1,140 @@
+/* Estilos gerais da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal do formulário */
+.contact-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Título do formulário */
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0056b3;
+  font-size: 2em;
+}
+
+/* Estilos para o formulário */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para os grupos de campos (label + input) */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilos para os campos de entrada de texto e e-mail */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none; /* Remove o contorno padrão do navegador */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para a área de texto */
+.form-group textarea {
+  resize: vertical; /* Permite redimensionar apenas verticalmente */
+  min-height: 120px;
+}
+
+/* Estilos para o botão de envio */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Estilos para mensagens de feedback (sucesso/erro) */
+.feedback-message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  opacity: 0; /* Inicia com opacidade 0 */
+  transition: opacity 0.5s ease;
+}
+
+.feedback-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  opacity: 1; /* Torna visível */
+}
+
+.feedback-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  opacity: 1; /* Torna visível */
+}
+
+/* Estilos para a animação do feedback */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.feedback-message {
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    margin: 10px;
+  }
+}
